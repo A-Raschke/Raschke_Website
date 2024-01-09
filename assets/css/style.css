@@ -1,3 +1,4 @@
+/* Root settings for color and text, makes changes easier */
 :root {
     --background-color: white;
     --article-color: rgb(61, 72, 102);
@@ -8,6 +9,7 @@
     --tab-text: 32px;
 }
 
+/* Body default color and text */
 body {
     color: var(--article-color);
     font-size: var(--article-text);
@@ -49,7 +51,7 @@ article ul {
     font-size: var(--article-text);
     flex: 2 75%;
 }
-
+/* Header included at the top of website with naviagation links */
 header {
     padding: 20px 0px;
     font-weight: bold;
@@ -74,6 +76,7 @@ header a {
     color: var(--nav-color);
 }
 
+/* Navigation links */
 header nav {
     margin: 10px;
     display: flex;
@@ -127,6 +130,7 @@ main {
     font-size: var(--nav-text);
 }
 
+/* Two snap classes needed because first link window needs to be larger than others per instructions */
 .snap1 {
     width: 100%;
     height: 400px;
@@ -180,6 +184,7 @@ main {
     justify-content: space-around;
 }
 
+/* Footer added at bottom of website */
 footer {
     padding: 10px 0px 10px 0px;
     font-weight: bold;
@@ -196,6 +201,7 @@ footer p {
     color: var(--tab-color);
 }
 
+/* Media px sizes taken from previous lessons: 992px, 768px, and 576px. Could use other values from Chrome console  */
 @media screen and (max-width: 992px) {
     :root {
       --article-text: 18px;
