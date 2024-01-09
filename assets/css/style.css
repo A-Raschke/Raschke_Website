@@ -1,0 +1,312 @@
+:root {
+    --background-color: white;
+    --article-color: rgb(61, 72, 102);
+    --article-text: 20px;
+    --nav-color: rgb(73, 74, 88);
+    --nav-text: 24px;
+    --tab-color: rgb(138, 241, 241);
+    --tab-text: 32px;
+}
+
+body {
+    color: var(--article-color);
+    font-size: var(--article-text);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a {
+    color: var(--tab-color);
+    font-size: var(--tab-text);
+}
+
+section {
+    display: flex;
+    margin: 50px auto;
+}
+
+p {
+    color: var(--article-color);
+    font-size: var(--article-text);
+}
+
+.tab {
+    margin: 30px;
+    width: 200px;
+    text-align: right;
+    font-size: var(--tab-text);
+    flex: 1 25%
+}
+
+.line {
+    padding: 20px 60px 20px 20px;
+    border-left: 5px solid var(--article-color);
+    font-size: var(--article-text);
+    flex: 2 75%;
+}
+
+article ul {
+    padding: 20px 60px 20px 20px;
+    font-size: var(--article-text);
+    flex: 2 75%;
+}
+
+header {
+    padding: 20px 0px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: var(--nav-color);
+    align-items: center;
+}
+
+header a {
+    color: var(--tab-color);
+    font-size: var(--nav-text);
+    margin: 0px 10px;
+}
+
+.name {
+    padding: 10px 20px 10px 30px;
+    margin: 10px 20px 10px 0px;
+    background-color: var(--tab-color);
+    font-size: var(--nav-text);
+    color: var(--nav-color);
+}
+
+header nav {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+header nav ul li {
+    display: inline;
+    justify-content: flex-end;
+}
+
+main {
+    background-image:url("../../assets/images/desert.jpg");
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+}
+
+.photo {
+    width: 70%;
+    padding: 5%;
+    text-align: right;
+    color: var(--tab-color);
+    font-size: var(--nav-text);
+}
+
+.photo img {
+    border: 5px solid var(--tab-color);
+    border-radius: 30%;
+    width: 30%;
+}
+
+.projects {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.projects a {
+    padding: 0px;
+}
+
+.projects h2 {
+    font-size: var(--nav-text);
+}
+
+.projects p {
+    margin: 5px auto;
+    font-size: var(--nav-text);
+}
+
+.snap1 {
+    width: 100%;
+    height: 400px;
+    margin: 40px 40px 0px 40px;
+}
+
+.snap1 div {
+    padding: 10px 10px 10px 20px;
+    width: max-content;
+    max-width: 75%;
+    background-color: var(--tab-color);
+    position: relative;
+    bottom: 55%;
+
+}
+
+.snap1 img {
+    width: 100%;
+    height: 100%;
+    border: 5px solid var(--tab-color);
+
+    object-fit: cover;
+}
+
+.snap {
+    width: 40%;
+    height: 200px;
+    margin: 20px 20px 0px 20px;
+}
+
+.snap div {
+    padding: 10px 10px 10px 20px;
+    width: max-content;
+    max-width: 75%;
+    background-color: var(--tab-color);
+    position: relative;
+    bottom: 55%;
+
+}
+
+.snap img {
+    width: 100%;
+    height: 100%;
+    border: 5px solid var(--tab-color);
+
+    object-fit: cover;
+}
+
+.contacts ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer {
+    padding: 10px 0px 10px 0px;
+    font-weight: bold;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--nav-color);
+    font-size: var(--tab-text);
+    text-align: center;
+}
+
+footer p {
+    color: var(--tab-color);
+}
+
+@media screen and (max-width: 992px) {
+    :root {
+      --article-text: 18px;
+      --nav-text: 20px;
+      --tab-text: 28px;
+    }
+
+    header {
+        justify-content: center;
+        top: 0;
+    }
+
+    header nav {
+        margin: 20px;
+    }
+
+    .name {
+        padding: 10px 20px;
+        margin: 10px;
+        border-radius: 20px;
+    }
+
+    .snap1 {
+        width: 80%;
+        margin: 10px;
+    }
+
+    .snap1 div {
+        bottom: 60%;
+    }
+
+    .snap {
+        width: 80%;
+        margin: 10px;
+    }
+
+    .snap div {
+        bottom: 60%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    :root {
+        --article-text: 14px;
+        --nav-text: 16px;
+        --tab-text: 24px;
+      }
+
+      header {
+        padding: 20px;
+      }
+
+      section {
+        flex-direction: column;
+        align-items: center;
+        margin: 0px auto;
+      }
+
+      .tab {
+        margin: 20px;
+        width: 100%;
+        text-align: center;
+        flex: 0;
+      }
+
+      .line {
+        flex-direction: column;
+        padding: 20px;
+        border-top: 5px solid var(--nav-color);
+        width: 80%;
+        border-left: 0;
+        flex: 0;
+      }
+  }
+  
+  @media screen and (max-width: 576px) {
+    :root {
+        --article-text: 12px;
+        --nav-text: 14px;
+        --tab-text: 20px;
+      }
+
+      header nav {
+        margin: 20px 0px 10px 0px;
+      }
+
+      .tab {
+        margin: 10px;
+      }
+
+      .snap1 {
+        width: 80%;
+      }
+
+      .snap {
+        width: 80%;
+      }
+
+      .contacts {
+        margin: 15px;
+      }
+
+      .line {
+        padding: 10px;
+        flex: 0;
+      }
+
+      .contacts ul {
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        padding: 20px;
+    }
+  }
